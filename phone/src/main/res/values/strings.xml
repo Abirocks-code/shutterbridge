@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="a11y_description">Lets your watch take a photo: when you press the shutter on the watch, this service opens the phone camera and taps its shutter button. It does nothing else and does not store or send what is on screen.</string>
+</resources>

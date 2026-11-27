@@ -15,4 +15,4 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "ShutterBridge"
-include(":phone", ":wear")
+include(":phone", ":wear", ":irfinder")

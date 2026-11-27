@@ -1,8 +1,9 @@
 name: Build APKs
 
+# Manual only: rebuilding Shutter Bridge creates APKs with a new signing key,
+# and the phone and watch apps must come from the same run.
 on:
   workflow_dispatch:
-  push:
 
 jobs:
   build:
@@ -15,7 +16,7 @@ jobs:
           java-version: 17
       - uses: gradle/actions/setup-gradle@v4
       - name: Build both APKs
-        run: chmod +x gradlew && ./gradlew assembleDebug --stacktrace
+        run: chmod +x gradlew && ./gradlew :phone:assembleDebug :wear:assembleDebug --stacktrace
       - uses: actions/upload-artifact@v4
         with:
           name: shutterbridge-apks
